@@ -10,11 +10,11 @@
     <h1>Create a New Car</h1>
     <form action="/new" method="POST">
         <label>Make:</label>
-        <input type="text" name="make"/>
+        <input type="text" required name="make"/>
         <label>Model:</label>
-        <input type="text" name="model"/>
+        <input type="text" required name="model"/>
         <label>Year:</label>
-        <input type="number" min="1970" max="2024" name="year"/>
+        <input type="number" required min="1970" max="2024" maxlength="4" name="year"/>
         <label>Domestic:</label>
         <input type="checkbox" name="domestic"/>
         <button type="submit">Submit</button>

@@ -40,7 +40,7 @@ app.get("/index", async (req, res)=>{
 app.get("/index/new", (req, res)=>{
     res.render("new.ejs", {});
 })
-    //Create Car Request
+    //Create Car Submission Request
 app.post("/new", async (req, res)=>{
     if(req.body.domestic === "on"){
         req.body.domestic = true;
@@ -52,11 +52,14 @@ app.post("/new", async (req, res)=>{
     res.redirect("/index")
 })
 
-
-
-// app.get("/index/:id", async (req, res)=>{
-//     const 
-// })
+    //Display car by Id
+app.get("/index/:id", async (req, res)=>{
+    const id = req.params.id;
+    const carSingle = await Car.findById(id)
+    res.render("find-car.ejs",{
+        car: carSingle
+    });
+})
 
 
 
