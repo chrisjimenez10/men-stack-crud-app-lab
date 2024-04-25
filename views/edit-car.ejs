@@ -7,5 +7,16 @@
 </head>
 <body>
     <h1>Edit Car Here</h1>
+    <form action="/index/:id" method="PUT">
+        <label>New Make:</label>
+        <input type="text" required name="make"/>
+        <label>New Model:</label>
+        <input type="text" required name="model"/>
+        <label>New Year:</label>
+        <input type="number" required min="1970" max="2024" name="year"/>
+        <label>Domestic:</label>
+        <input type="checkbox" name="domestic"/>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
