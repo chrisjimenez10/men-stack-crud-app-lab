@@ -52,11 +52,17 @@ app.post("/new", async (req, res)=>{
     res.redirect("/index")
 })
 
-    //Display car by Id
+    //Find Car Show Page by ID
+app.get("/index/find", async (req, res)=>{
+    
+})
+
+    //Display Car Details
 app.get("/index/:id", async (req, res)=>{
     const id = req.params.id;
     const carSingle = await Car.findById(id)
-    res.render("find-car.ejs",{
+    // console.log(typeof carSingle._id);
+    res.render("car-details.ejs",{
         car: carSingle
     });
 })

@@ -6,7 +6,7 @@ const carSchema = new mongoose.Schema({
     make: String,
     model: String,
     year: Number,
-    domestic: Boolean
+    domestic: Boolean,
 })
 
 //Create model/collection
