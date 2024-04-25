@@ -6,11 +6,13 @@
     <title>Index</title>
 </head>
 <body>
+    <a href="/">Home Page</a>
     <h1>Car Garage</h1>
     <ul>
         <% cars.forEach(car => { %>
             <li><%= car.make %> <%= car.model %> - <%= car.year %></li>
         <% }) %>
     </ul>
+    <a href="/index/new"><button>Create</button></a>
 </body>
 </html>

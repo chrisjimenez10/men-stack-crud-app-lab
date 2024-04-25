@@ -28,11 +28,19 @@ app.listen(port, ()=>{
 app.get("/", (req, res)=>{
     res.render("home.ejs",{})
 })
+    //Index Page
+app.get("/index", async (req, res)=>{
+    const carList = await Car.find();
+    res.render("index.ejs", {
+        cars: carList
+    });
     
-app.get("/new", (req, res)=>{
+})
+    //Create Car Show Form Page
+app.get("/index/new", (req, res)=>{
     res.render("new.ejs", {});
 })
-
+    //Create Car Request
 app.post("/new", async (req, res)=>{
     if(req.body.domestic === "on"){
         req.body.domestic = true;
@@ -44,14 +52,7 @@ app.post("/new", async (req, res)=>{
     res.redirect("/index")
 })
 
-app.get("/index", async (req, res)=>{
-    const carList = await Car.find();
-    
-    res.render("index.ejs", {
-        cars: carList
-    });
-    
-})
+
 
 // app.get("/index/:id", async (req, res)=>{
 //     const 
