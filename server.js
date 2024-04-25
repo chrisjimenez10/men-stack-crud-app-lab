@@ -52,11 +52,6 @@ app.post("/new", async (req, res)=>{
     res.redirect("/index")
 })
 
-    //Find Car Show Page by ID
-app.get("/index/find", async (req, res)=>{
-    
-})
-
     //Display Car Details
 app.get("/index/:id", async (req, res)=>{
     const id = req.params.id;
@@ -65,6 +60,10 @@ app.get("/index/:id", async (req, res)=>{
     res.render("car-details.ejs",{
         car: carSingle
     });
+})
+
+app.get("/index/:id/edit", (req, res)=>{
+    res.render("edit-car.ejs", {});
 })
 
 
