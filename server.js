@@ -84,16 +84,16 @@ app.post("/index/:id/edit", async (req, res)=>{
         model: req.body.model,
         year: req.body.year,
         domestic: req.body.domestic},
-        // {new: true}
-        res.redirect("/index")
+        {new: true}
     )
+    console.log(carSingle);
+    res.redirect("/index")
 })
 
     //Delete Car
-app.delete("/index/:id", async (req, res)=>{
+app.post("/index/:id", async (req, res)=>{
     const id = req.params.id;
     const deletedCar = await Car.findByIdAndDelete(id);
-    console.log(deletedCar.model);
+    console.log(deletedCar);
     res.redirect("/index");
 })
-

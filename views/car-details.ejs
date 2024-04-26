@@ -11,6 +11,9 @@
         <h3>Domestic: <%= car.domestic %></h3>
         <h3>ID: <%= car._id %></h3>
         <a href="/index/<%= car._id %>/edit"><button>Edit Car</button></a>
-        <a href=""><button>Delete Car</button></a>
+        <form action="/index/<%= car._id %>" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+        <a href="/index"><button>Garage</button></a>
 </body>
 </html>
