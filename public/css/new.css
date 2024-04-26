@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}    
+body {
+    background-image: url("https://engineerine.com/wp-content/uploads/2023/07/Untitled-design-1-2.png");
+    background-size: 1950px 1250px;
+    font-family: "Contrail One", sans-serif;
+    background-size: 1950px 1150px;
+    font-family: "Contrail One", sans-serif;
+}

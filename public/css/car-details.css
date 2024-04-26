@@ -22,6 +22,11 @@ body {
         opacity: 1;
     }
 }
+
+a {
+    text-decoration: none;
+}
+
 .nav-container {
     background-color: hsla(0, 0%, 0%, 0.35);
     padding: 5px;
@@ -57,4 +62,22 @@ h3 {;
     animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
+.buttons {
+    grid-area: button;
+    display: flex;
+}
 
+button {
+    font-family: "Contrail One", sans-serif;
+    border-radius: 15px;
+    width: 100px;
+    height: 35px;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 5px 0 black;
+    margin-left: 20px;
+    box-shadow: 3px 3px 3px lightcyan;
+}
+
+button:hover {
+    cursor: pointer;
+}
