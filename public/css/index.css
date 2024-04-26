@@ -20,11 +20,12 @@
   
 body {
     font-family: "Contrail One", sans-serif;
-    background-color: background: rgb(0,36,36);
-    background: rgb(176,185,24);
-    background: rgb(176,185,24);
-    background: rgb(176,185,24);
-    background: -webkit-linear-gradient(344deg, rgba(176,185,24,0.17333333333333334) 28%, rgba(255,0,0,0.1644444444444444) 50%, rgba(24,181,95,0.3355555555555556) 77%);
+    background-image: url("https://www.thedrive.com/content/2018/02/collection.jpg?quality=85");
+}
+
+.nav-container {
+    background-color: hsla(360, 100%, 100%, 0.25);
+    padding: 5px;
 }
 
 .grid-container {
@@ -41,6 +42,8 @@ h1 {
     animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     grid-area: heading;
     font-size: 4rem;
+    color: white;
+    text-shadow: 3px 3px 2px lightcyan;
 }
 
 ul {
@@ -48,6 +51,14 @@ ul {
     grid-area: list;
     line-height: 35px;
     animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+li{
+    color: lightcyan;
+}
+
+li:hover {
+    color: green;
 }
 
 a {
@@ -63,6 +74,7 @@ a {
     font-size: 1.5rem;
     box-shadow: 5px 5px 5px 0 black;
     margin-left: 10px;
+    box-shadow: 3px 3px 3px lightcyan;
 }
 
 #create-btn:hover {
