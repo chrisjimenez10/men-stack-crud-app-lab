@@ -89,5 +89,11 @@ app.post("/index/:id/edit", async (req, res)=>{
     )
 })
 
-
+    //Delete Car
+app.delete("/index/:id", async (req, res)=>{
+    const id = req.params.id;
+    const deletedCar = await Car.findByIdAndDelete(id);
+    console.log(deletedCar.model);
+    res.redirect("/index");
+})
 
