@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Edit Car Here</h1>
-    <form action="/index/:id" method="PUT">
+    <form action="/index/<%= id %>/edit" method="POST">
         <label>New Make:</label>
         <input type="text" required name="make"/>
         <label>New Model:</label>

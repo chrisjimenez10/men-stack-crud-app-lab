@@ -64,11 +64,14 @@ app.get("/index/:id", async (req, res)=>{
 
     //Edit Car Show Page
 app.get("/index/:id/edit", (req, res)=>{
-    res.render("edit-car.ejs", {})
+    const id = req.params.id;
+    res.render("edit-car.ejs", {
+        id //It's shorthand syntax for id:id
+    })
 })
 
     //Edit Car Submission Request
-app.put("/index/:id", async (req, res)=>{
+app.post("/index/:id/edit", async (req, res)=>{
     const id = req.params.id;
     if(req.body.domestic === "on"){
         req.body.domestic = true;
@@ -77,14 +80,13 @@ app.put("/index/:id", async (req, res)=>{
     }
     const carSingle = await Car.findByIdAndUpdate(
         id,
-        {make: req.body.make},
-        {model: req.body.model},
-        {year: req.body.year},
-        {domestic: req.body.domestic},
-        {new: true}
+        {make: req.body.make,
+        model: req.body.model,
+        year: req.body.year,
+        domestic: req.body.domestic},
+        // {new: true}
+        res.redirect("/index")
     )
-    console.log(carSingle)
-    res.redirect("/index");
 })
 
 
