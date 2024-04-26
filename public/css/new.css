@@ -10,3 +10,21 @@ body {
     background-size: 1950px 1150px;
     font-family: "Contrail One", sans-serif;
 }
+
+a{
+    text-decoration: none;
+}
+
+.nav-container {
+    background-color: hsla(0, 0%, 99%, 0.25);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    "heading"
+    "form"
+    "garage-btn";
+}

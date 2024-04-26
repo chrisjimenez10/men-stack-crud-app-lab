@@ -29,7 +29,8 @@ a {
 
 .nav-container {
     background-color: hsla(0, 0%, 0%, 0.35);
-    padding: 5px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .grid-container {
@@ -58,7 +59,7 @@ main {
     grid-area: list;
 }
 
-h3 {;
+h3 {
     animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 

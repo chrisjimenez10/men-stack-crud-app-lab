@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="../css/new.css"/>
 </head>
 <body>
-    <%- include("nav.ejs") %>
-    <h1>Create a New Car</h1>
-    <form action="/new" method="POST">
-        <label>Make:</label>
-        <input type="text" required name="make"/>
-        <label>Model:</label>
-        <input type="text" required name="model"/>
-        <label>Year:</label>
-        <input type="number" required min="1970" max="2024" name="year"/>
-        <label>Domestic:</label>
-        <input type="checkbox" name="domestic"/>
-        <button type="submit">Submit</button>
-    </form>
-    <a href="/index"><button>Garage</button></a>
+    <div class="nav-container"><%- include("nav.ejs") %></div>
+    <div class="grid-container">
+        <h1>Create a New Car</h1>
+        <form action="/new" method="POST">
+            <label>Make:</label>
+            <input type="text" required name="make"/>
+            <label>Model:</label>
+            <input type="text" required name="model"/>
+            <label>Year:</label>
+            <input type="number" required min="1970" max="2024" name="year"/>
+            <label>Domestic:</label>
+            <input type="checkbox" name="domestic"/>
+            <button type="submit">Submit</button>
+        </form>
+        <a href="/index"><button>Garage</button></a>
+    </div>
 </body>
 </html>
