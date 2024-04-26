@@ -63,10 +63,12 @@ app.get("/index/:id", async (req, res)=>{
 })
 
     //Edit Car Show Page
-app.get("/index/:id/edit", (req, res)=>{
+app.get("/index/:id/edit", async (req, res)=>{
     const id = req.params.id;
+    const carList = await Car.find()
     res.render("edit-car.ejs", {
-        id //It's shorthand syntax for id:id
+        id, //It's shorthand syntax for id:id
+        cars: carList //trying to display value placeholders
     })
 })
 
