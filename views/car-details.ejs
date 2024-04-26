@@ -8,7 +8,7 @@
 <body>
         <h1><%= car.make %> - <%= car.model %></h1>
         <h3>Year: <%= car.year %></h3>
-        <h3>Domestic: <%= car.domestic %></h3>
+        <h3>Domestic: <%= car.domestic === true ? "Yes" : "No" %></h3>
         <h3>ID: <%= car._id %></h3>
         <a href="/index/<%= car._id %>/edit"><button>Edit Car</button></a>
         <form action="/index/<%= car._id %>" method="POST">
