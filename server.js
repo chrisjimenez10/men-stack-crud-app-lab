@@ -30,26 +30,26 @@ app.get("/", (req, res)=>{
 })
     //Index Page
 app.get("/index", async (req, res)=>{
-    const carList = await Car.find();
-    res.render("index.ejs", {
-        cars: carList
-    });
-    
+        const carList = await Car.find();
+        res.render("index.ejs", {
+            cars: carList
+        });
+
 })
     //Create Car Show Form Page
 app.get("/index/new", (req, res)=>{
-    res.render("new.ejs", {});
+        res.render("new.ejs", {});
 })
     //Create Car Submission Request
 app.post("/new", async (req, res)=>{
-    if(req.body.domestic === "on"){
-        req.body.domestic = true;
-    }else{
-        req.body.domestic = false;
-    }
-    const newCar = await Car.create(req.body);
-    console.log(newCar);
-    res.redirect("/index")
+        if(req.body.domestic === "on"){
+            req.body.domestic = true;
+        }else{
+            req.body.domestic = false;
+        }
+        const newCar = await Car.create(req.body);
+        console.log(newCar);
+        res.redirect("/index");
 })
 
     //Display Car Details
@@ -66,9 +66,14 @@ app.get("/index/:id", async (req, res)=>{
 app.get("/index/:id/edit", async (req, res)=>{
     const id = req.params.id;
     const carList = await Car.find()
+    let carMake;
+    carList.forEach((car)=>{
+        carMake = car.make;
+    })
+    console.log(carMake)
     res.render("edit-car.ejs", {
         id, //It's shorthand syntax for id:id
-        cars: carList //trying to display value placeholders
+        make: carMake //trying to display value placeholders
     })
 })
 

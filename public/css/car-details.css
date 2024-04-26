@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://sparklearmor.com/wp-content/uploads/2021/12/dangers-of-rust.jpg");
+    font-family: "Contrail One", sans-serif;
+}
+
+@keyframes text-slide {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+.nav-container {
+    background-color: hsla(0, 0%, 0%, 0.35);
+    padding: 5px;
+}
+
+.grid-container {
+    display: grid;
+    justify-items: left;
+    grid-template-areas:
+    "heading"
+    "list"
+    "button";
+    height: 50vh;
+}
+
+h1 {
+    animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    grid-area: heading;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 3px 3px 2px lightcyan;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    color: lightcyan;
+    font-size: 1.5rem;
+    grid-area: list;
+}
+
+h3 {;
+    animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+

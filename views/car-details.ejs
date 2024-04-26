@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Details</title>
+    <link rel="stylesheet" href="../css/car-details.css">
 </head>
 <body>
+    <div class="nav-container">
+        <%- include("nav.ejs") %>
+    </div>
+    <div class="grid-container">
         <h1><%= car.make %> - <%= car.model %></h1>
-        <h3>Year: <%= car.year %></h3>
-        <h3>Domestic: <%= car.domestic === true ? "Yes" : "No" %></h3>
-        <h3>ID: <%= car._id %></h3>
+        <main>
+            <h3>Year: <%= car.year %></h3>
+            <h3>Domestic: <%= car.domestic === true ? "Yes" : "No" %></h3>
+            <h3>ID: <%= car._id %></h3>
+        </main>
         <a href="/index/<%= car._id %>/edit"><button>Edit Car</button></a>
         <form action="/index/<%= car._id %>" method="POST">
             <button type="submit">Delete</button>
         </form>
         <a href="/index"><button>Garage</button></a>
+    </div>
 </body>
 </html>
