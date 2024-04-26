@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+@keyframes text-slide {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+  
+body {
+    font-family: "Contrail One", sans-serif;
+    background-color: background: rgb(0,36,36);
+    background: rgb(176,185,24);
+    background: rgb(176,185,24);
+    background: rgb(176,185,24);
+    background: -webkit-linear-gradient(344deg, rgba(176,185,24,0.17333333333333334) 28%, rgba(255,0,0,0.1644444444444444) 50%, rgba(24,181,95,0.3355555555555556) 77%);
+}
+
+.grid-container {
+    display: grid;
+    justify-items: left;
+    grid-template-areas:
+    "heading"
+    "list"
+    "button";
+    height: 50vh;
+}
+
+h1 {
+    animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    grid-area: heading;
+    font-size: 4rem;
+}
+
+ul {
+    font-size: 1.5rem;
+    grid-area: list;
+    line-height: 35px;
+    animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+a {
+    text-decoration: none;
+}
+
+#create-btn {
+    grid-area: button;
+    font-family: "Contrail One", sans-serif;
+    border-radius: 15px;
+    width: 100px;
+    height: 35px;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 5px 0 black;
+    margin-left: 10px;
+}
+
+#create-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}

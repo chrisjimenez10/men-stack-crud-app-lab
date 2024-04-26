@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <link rel="stylesheet" href="./css/index.css"/>
 </head>
 <body>
-    <a href="/">Home Page</a>
-    <h1>Car Garage</h1>
-    <ul>
-        <% cars.forEach(car => { %>
-            <a href="/index/<%= car._id %>"><li><%= car.model %></li></a>
-        <% }) %>
-    </ul>
-    <a href="/index/new"><button>Create</button></a>
+    <%- include("nav.ejs") %>
+    <div class="grid-container">
+        <h1>Car Garage</h1>
+        <ul>
+            <% cars.forEach(car => { %>
+                <a href="/index/<%= car._id %>"><li><%= car.model %></li></a>
+            <% }) %>
+        </ul>
+        <a href="/index/new"><button id="create-btn">Create</button></a>
+    </div>
 </body>
 </html>
