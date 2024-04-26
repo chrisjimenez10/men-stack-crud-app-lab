@@ -83,10 +83,11 @@ app.post("/index/:id/edit", async (req, res)=>{
         {make: req.body.make,
         model: req.body.model,
         year: req.body.year,
-        domestic: req.body.domestic},
-        // {new: true}
+        domestic: req.body.domestic}, //Put all properties within ONE object
+        {new: true}, //If I want to log updated variable (carSingle), I need to include this mongoose option from the findByIdAndUpdate() method
         res.redirect("/index")
     )
+    // console.log(carSingle.make, carSingle.model, carSingle.year, carSingle.domestic)
 })
 
 
