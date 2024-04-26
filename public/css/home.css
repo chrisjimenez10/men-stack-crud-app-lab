@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/032/330/368/non_2x/ai-generated-industrial-high-tech-line-for-the-assembly-and-production-of-modern-cars-at-the-plant-photo.jpg");
+    background-size: 1950px 1250px;
+    font-family: "Contrail One", sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    "heading"
+    "button";
+    justify-items: center;
+    height: 50vh;
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+    grid-area: heading;
+    text-shadow: 10px 10px 5px black;
+}
+
+#garage-btn {
+    font-family: "Contrail One", sans-serif;
+    border-radius: 15px;
+    width: 150px;
+    height: 45px;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 5px 0 black;
+    grid-area: button;
+    background-color: white;
+}
+#garage-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
