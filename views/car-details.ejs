@@ -15,8 +15,10 @@
         <main>
             <h3>Year: <%= car.year %></h3>
             <h3>Domestic: <%= car.domestic === true ? "Yes" : "No" %></h3>
-            <h3>ID: <%= car._id %></h3>
         </main>
+        <div class="image">
+            <img src="<%= car.image %>"/>
+        </div>
         <div class="buttons">
             <a href="/index/<%= car._id %>/edit"><button id="edit-btn">Edit Car</button></a>
             <form action="/index/<%= car._id %>?_method=DELETE" method="POST">

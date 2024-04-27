@@ -37,9 +37,9 @@ a {
     display: grid;
     justify-items: left;
     grid-template-areas:
-    "heading"
-    "list"
-    "button";
+    "heading image"
+    "list image"
+    "button image";
     height: 50vh;
 }
 
@@ -81,4 +81,19 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+.image {
+    grid-area: image;
+    display: flex;
+    align-items: center;
+    margin-top: 125px;
+    width: 500px;
+    height: 400px;
+}
+
+img {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
 }
