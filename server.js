@@ -100,9 +100,17 @@ app.post("/index/:id/edit", async (req, res)=>{
 })
 
     //Delete Car
-app.post("/index/:id", async (req, res)=>{
+// app.post("/index/:id", async (req, res)=>{
+//     const id = req.params.id;
+//     const deletedCar = await Car.findByIdAndDelete(id);
+//     console.log(deletedCar);
+//     res.redirect("/index");
+// })
+
+        //We need to use the middleware function of "methodoverride", so we can use this app.delete route (Also, we need to add a query parameter in the action attribute of the <form> element of "?_method=DELETE" and keep the method to POST)
+app.delete("/index/:id", async (req, res)=>{
     const id = req.params.id;
     const deletedCar = await Car.findByIdAndDelete(id);
     console.log(deletedCar);
     res.redirect("/index");
-})
+}) 

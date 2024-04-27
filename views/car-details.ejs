@@ -19,7 +19,7 @@
         </main>
         <div class="buttons">
             <a href="/index/<%= car._id %>/edit"><button id="edit-btn">Edit Car</button></a>
-            <form action="/index/<%= car._id %>" method="POST">
+            <form action="/index/<%= car._id %>?_method=DELETE" method="POST">
                 <button type="submit" id="delete-btn">Delete</button>
             </form>
             <a href="/index"><button id="garage-btn">Garage</button></a>
