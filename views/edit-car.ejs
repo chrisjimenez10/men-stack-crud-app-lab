@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Car</title>
-    <link rel="stylesheet" href="../public/css/edit.css" />
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
 </head>
 <body>
+    <div class="nav-container">
+        <%- include("nav.ejs") %>
+    </div>
     <h1>Edit Car Here</h1>
     <form action="/index/<%= id %>/edit?_method=PUT" method="POST">
         <label>New Make:</label>
@@ -15,9 +22,14 @@
         <input type="text" required name="model"/>
         <label>New Year:</label>
         <input type="number" required min="1970" max="2024" name="year"/>
+        <label>Image URL:</label>
+        <input type="text" required name="image" />
+        <label>Description:</label>
+        <textarea required name="message" maxlength="200"></textarea>
         <label>Domestic:</label>
         <input type="checkbox" name="domestic"/>
         <button type="submit">Submit</button>
     </form>
+    <a href="/index/<%= id %>"><button>Return</button></a>
 </body>
 </html>

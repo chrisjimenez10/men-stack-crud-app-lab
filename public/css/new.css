@@ -74,3 +74,15 @@ button {
 button:hover {
     transform: scale(1.10);
 }
+
+textarea {
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+}
+textarea:invalid {
+    background-color: hsla(357, 82%, 69%, 0.4);
+}
+textarea:valid {
+    background-color: hsla(116, 82%, 69%, 0.4);;
+}
