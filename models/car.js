@@ -8,7 +8,7 @@ const carSchema = new mongoose.Schema({
     year: Number,
     domestic: Boolean,
     image: String,
-    description: String
+    message: String
 })
 
 //Create model/collection

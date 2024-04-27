@@ -51,6 +51,7 @@ app.post("/new", async (req, res)=>{
         }
         const newCar = await Car.create(req.body);
         console.log(newCar);
+        console.log(newCar.message)
         res.redirect("/index");
 })
 
@@ -92,7 +93,8 @@ app.put("/index/:id/edit", async (req, res)=>{
         {make: req.body.make,
         model: req.body.model,
         year: req.body.year,
-        domestic: req.body.domestic},
+        domestic: req.body.domestic,
+        message: req.body.message},
         {new: true}
     )
     console.log(carSingle);
