@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://sparklearmor.com/wp-content/uploads/2021/12/dangers-of-rust.jpg");
+    font-family: "Contrail One", sans-serif;
+}

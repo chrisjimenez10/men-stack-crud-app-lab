@@ -94,7 +94,7 @@ app.post("/index/:id/edit", async (req, res)=>{
         {new: true}
     )
     console.log(carSingle);
-    res.redirect("/index")
+    res.redirect(`/index/${id}`)
 })
 
     //Delete Car

@@ -7,11 +7,9 @@ body {
     background-image: url("https://engineerine.com/wp-content/uploads/2023/07/Untitled-design-1-2.png");
     background-size: 1950px 1250px;
     font-family: "Contrail One", sans-serif;
-    background-size: 1950px 1150px;
-    font-family: "Contrail One", sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -27,4 +25,52 @@ a{
     "heading"
     "form"
     "garage-btn";
+    color: white;
+    height: 50vh;
+}
+h1 {
+    text-shadow: 3px 3px 2px lightcyan;
+    font-size: 4rem;
+    grid-area: heading;
+}
+form {
+    font-size: 1.5rem;
+    grid-area: form;
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+}
+label {
+    margin-top: 17px;
+}
+input {
+    width: 125px;
+    height: 25px;
+    margin: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+input:invalid {
+    background-color: hsla(357, 82%, 69%, 0.4);
+}
+input:valid {
+    background-color: hsla(116, 82%, 69%, 0.4);
+}
+#submit {
+    margin-top: 17px;
+    font-family: "Contrail One", sans-serif;
+}
+button {
+    grid-area: garage-btn;
+    width: 100px;
+    height: 35px;
+    font-family: "Contrail One", sans-serif;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px lightcyan;
+}
+button:hover {
+    transform: scale(1.10);
 }
