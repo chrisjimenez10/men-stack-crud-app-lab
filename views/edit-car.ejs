@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Car</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }    
         body {
             background-color: lightblue;
+            font-family: "Contrail One", sans-serif;
+        }
+        input {
+            border-radius: 10px;
+        }
+        section {
+            margin-top: 20px;
+        }
+        #return-btn {
+            margin-top: 35px;
+            border-radius: 10px;
+            font-family: "Contrail One", sans-serif;
+        }
+        #submit-btn {
+            border-radius: 10px;
+            font-family: "Contrail One", sans-serif;   
+        }
+        button:hover {
+            cursor: pointer;
+            transform: scale(1.10);
         }
     </style>
 </head>
@@ -15,7 +40,7 @@
         <%- include("nav.ejs") %>
     </div>
     <h1>Edit Car Here</h1>
-    <form action="/index/<%= id %>/edit?_method=PUT" method="POST">
+    <form action="/index/<%= id %>/edit?_method=PUT" method="POST">        
         <label>New Make:</label>
         <input type="text" required name="make"/>
         <label>New Model:</label>
@@ -24,12 +49,14 @@
         <input type="number" required min="1970" max="2024" name="year"/>
         <label>Image URL:</label>
         <input type="text" required name="image" />
-        <label>Description:</label>
-        <textarea required name="message" maxlength="200"></textarea>
+        <section>
+            <label>Description:</label>
+            <textarea required name="message" maxlength="200"></textarea>
+        </section>
         <label>Domestic:</label>
         <input type="checkbox" name="domestic"/>
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit-btn">Submit</button>
     </form>
-    <a href="/index/<%= id %>"><button>Return</button></a>
+    <a href="/index/<%= id %>"><button id="return-btn">Return</button></a>
 </body>
 </html>
