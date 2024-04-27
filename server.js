@@ -80,7 +80,7 @@ app.get("/index/:id/edit", async (req, res)=>{
 })
 
     //Edit Car Submission Request
-app.post("/index/:id/edit", async (req, res)=>{
+app.put("/index/:id/edit", async (req, res)=>{
     const id = req.params.id;
     if(req.body.domestic === "on"){
         req.body.domestic = true;
