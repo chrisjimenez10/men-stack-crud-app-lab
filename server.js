@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const mongoose = require("mongoose");
+const methodOverride = require("method-override"); //This package (method-override) allows us to use DELETE and PUT HTTP route methods (since HTML form's attribute of method can only pass POST or GET actions)
 const morgan = require("morgan");
 const Car = require("./models/car.js");
 
@@ -13,6 +14,7 @@ mongoose.connection.on("connected", ()=>{
 })
 
 //Middleware
+app.use(methodOverride("_method")); //Mounting it to our express instance
 app.use(morgan("dev"));
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:false}));
