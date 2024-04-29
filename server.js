@@ -32,7 +32,7 @@ app.get("/", (req, res)=>{
 })
     //Index Page
 app.get("/index", async (req, res)=>{
-        const carList = await Car.find();
+        const carList = await Car.find().sort({model: "asc"});
         res.render("index.ejs", {
             cars: carList
         });
