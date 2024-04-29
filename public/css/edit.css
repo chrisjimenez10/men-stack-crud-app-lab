@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+@keyframes text-slide {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+body {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/039/617/725/non_2x/ai-generated-polished-shiny-beautiful-black-car-on-dark-isolated-background-for-website-or-print-design-generative-ai-free-photo.jpg");
+    background-size: 1950px 1200px;
+    font-family: "Contrail One", sans-serif;
+    color: black;
+    font-size: 2rem;
+}
+h1 {
+    animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 3px 3px 2px lightcyan;
+}
+
+input {
+    width: 125px;
+    height: 25px;
+    margin: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+input:invalid {
+    background-color: hsla(357, 82%, 69%, 0.4);
+}
+input:valid {
+    background-color: hsla(116, 82%, 69%, 0.4);
+}
+textarea {
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+}
+textarea:invalid {
+    background-color: hsla(357, 82%, 69%, 0.4);
+}
+textarea:valid {
+    background-color: hsla(116, 82%, 69%, 0.4);;
+}
+
+section {
+    margin-top: 20px;
+}
+#return-btn {
+    margin-top: 35px;
+    border-radius: 10px;
+    font-family: "Contrail One", sans-serif;
+    width: 100px;
+    height: 35px;
+    font-size: 1.5rem;
+    box-shadow: 3px 3px 3px lightcyan;
+}
+#submit-btn {
+    border-radius: 10px;
+    font-family: "Contrail One", sans-serif;
+    width: 100px;
+    height: 35px;
+    font-size: 1.5rem;
+    box-shadow: 3px 3px 3px lightcyan;   
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.nav-container {
+    background-color: hsla(360, 100%, 100%, 0.25);
+    padding: 5px;
+    border-radius: 10px;
+}
+a {
+    text-decoration: none;
+}
+form {
+    animation: text-slide 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    color: lightcyan;
+}
