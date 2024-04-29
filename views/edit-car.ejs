@@ -13,19 +13,22 @@
     <h1>Edit Car Here</h1>
     <form action="/index/<%= id %>/edit?_method=PUT" method="POST">        
         <label>New Make:</label>
-        <input type="text" required name="make"/>
+        <input type="text" required name="make" value="<%= car.make %>"/>
         <label>New Model:</label>
-        <input type="text" required name="model"/>
+        <input type="text" required name="model" value="<%= car.model %>"/>
         <label>New Year:</label>
-        <input type="number" required min="1970" max="2024" name="year"/>
+        <input type="number" required min="1970" max="2024" name="year" value="<%= car.year %>"/>
         <label>Image URL:</label>
-        <input type="text" required name="image" />
+        <input type="text" required name="image" value="<%= car.image %>"/>
         <section>
             <label>Description:</label>
-            <textarea required name="message" maxlength="200"></textarea>
+            <textarea required name="message" maxlength="200" id="text-area"></textarea>
         </section>
         <label>Domestic:</label>
-        <input type="checkbox" name="domestic"/>
+        <input type="checkbox" name="domestic"
+        <% if(car.domestic){ %>
+            checked
+        <% } %> />
         <button type="submit" id="submit-btn">Submit</button>
     </form>
     <a href="/index/<%= id %>"><button id="return-btn">Return</button></a>

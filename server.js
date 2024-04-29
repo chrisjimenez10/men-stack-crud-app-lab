@@ -68,15 +68,10 @@ app.get("/index/:id", async (req, res)=>{
     //Edit Car Show Page
 app.get("/index/:id/edit", async (req, res)=>{
     const id = req.params.id;
-    const carList = await Car.find()
-    let carMake;
-    carList.forEach((car)=>{
-        carMake = car.make;
-    })
-    console.log(carMake)
+    const car = await Car.findById(id);
     res.render("edit-car.ejs", {
         id, //It's shorthand syntax for id:id
-        make: carMake //trying to display value placeholders
+        car
     })
 })
 
@@ -94,7 +89,8 @@ app.put("/index/:id/edit", async (req, res)=>{
         model: req.body.model,
         year: req.body.year,
         domestic: req.body.domestic,
-        message: req.body.message},
+        message: req.body.message,
+        image: req.body.image},
         {new: true}
     )
     console.log(carSingle);
