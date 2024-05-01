@@ -20,7 +20,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended:false}));
 
 //Start Server
-const port = 5000;
+const port = 4001;
 app.listen(port, ()=>{
     console.log(`Listening on port ${port}`);
 })
